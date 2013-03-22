@@ -1,0 +1,11 @@
+include LICENSE
+include MANIFEST.in
+include *.rst
+recursive-include *.xsd
+graft contrib
+graft doc
+graft etc
+recursive-exclude doc/build/*/ *
+global-exclude *~
+global-exclude *.pyc
+global-exclude .gitignore
