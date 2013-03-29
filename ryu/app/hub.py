@@ -33,11 +33,11 @@ from ryu.lib.mac import haddr_to_str
 # TODO: we need to move the followings to something like db
 
 
-class SimpleSwitch(app_manager.RyuApp):
+class Hub(app_manager.RyuApp):
     OFP_VERSIONS = [ofproto_v1_2.OFP_VERSION]
 
     def __init__(self, *args, **kwargs):
-        super(SimpleSwitch, self).__init__(*args, **kwargs)
+        super(Hub, self).__init__(*args, **kwargs)
         
     @set_ev_cls(ofp_event.EventOFPPacketIn, MAIN_DISPATCHER)
     def _packet_in_handler(self, ev):
